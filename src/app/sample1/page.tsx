@@ -13,10 +13,11 @@ export default function Page() {
   return (
     <form className={styles.form} action={dispatch}>
       <select name="sweets" defaultValue={state}>
-        <option value="donuts">donuts</option>
-        <option value="muffin">muffin</option>
-        <option value="tart">tart</option>
-        <option value="rice">rice</option>
+        {["donuts", "muffin", "tart", "rice", "error"].map((item) => (
+          <option value={item} key={item}>
+            {item}
+          </option>
+        ))}
       </select>
       <button>Submit</button>
       {state}
