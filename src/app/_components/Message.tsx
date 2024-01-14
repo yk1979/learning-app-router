@@ -5,5 +5,5 @@ type Props = {
 
 export const Message: React.FC<Props> = (props) => {
   const { warning = false, children } = props;
-  return <p style={{ color: warning ? "red" : "white" }}>{children}</p>;
+  return <p style={warning ? { color: "red" } : undefined}>{children}</p>;
 };
