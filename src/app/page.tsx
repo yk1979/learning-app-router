@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 
-const contents = ["Return Message"];
+const contents = ["Return Message", "Return Result"];
 
 export default function Home() {
   return (
