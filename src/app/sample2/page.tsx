@@ -3,6 +3,7 @@
 import styles from "./page.module.css";
 
 import { useFormState } from "react-dom";
+import { Message } from "../_components/Message";
 import { Select } from "../_components/Select";
 import { myFormAction } from "./action";
 
@@ -22,9 +23,9 @@ export default function Page() {
     <form className={styles.form} action={dispatch}>
       <Select name="sweets" defaultValue={state.data} />
       <button>Submit</button>
-      <p style={{ color: state.error ? "red" : "white" }}>
+      <Message warning={state.error !== null}>
         {state.error ? state.error.message : state.data}
-      </p>
+      </Message>
     </form>
   );
 }

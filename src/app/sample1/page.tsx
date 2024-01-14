@@ -3,6 +3,7 @@
 import styles from "./page.module.css";
 
 import { useFormState } from "react-dom";
+import { Message } from "../_components/Message";
 import { Select } from "../_components/Select";
 import { myFormAction } from "./action";
 
@@ -15,7 +16,7 @@ export default function Page() {
     <form className={styles.form} action={dispatch}>
       <Select name="sweets" defaultValue={state} />
       <button>Submit</button>
-      {state}
+      <Message>{state}</Message>
     </form>
   );
 }
